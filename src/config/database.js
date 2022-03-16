@@ -13,7 +13,8 @@ module.exports = {
     database: connectionOptions.database,
     port: connectionOptions.port,
     dialectoptions: {
-      useUTC: false
+      useUTC: false,
+      ssl: true
     },
     timezone: "-03:00",
     define: {
@@ -30,7 +31,8 @@ module.exports = {
     database: connectionOptions.database,
     port: connectionOptions.port,
     dialectoptions: {
-      useUTC: false
+      useUTC: false,
+      ssl: true
     },
     timezone: "-03:00",
     define: {
@@ -47,7 +49,8 @@ module.exports = {
     database: connectionOptions.database,
     port: connectionOptions.port,
     dialectoptions: {
-      useUTC: false
+      useUTC: false,
+      ssl: true
     },
     timezone: "-03:00",
     define: {
