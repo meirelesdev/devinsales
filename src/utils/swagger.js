@@ -6,8 +6,8 @@ const doc = {
     description:
       "Estas é a documentação para as desenvolvedores que utilizaram nossa API.",
   },
-  host: "localhost:3333",
-  schemes: ["http"],
+  host: "devinsales.herokuapp.com",
+  schemes: ["https"],
   securityDefinitions: {
     bearerAuth: {
       type: "apiKey",
