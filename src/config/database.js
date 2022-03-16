@@ -50,7 +50,9 @@ module.exports = {
     port: connectionOptions.port,
     dialectoptions: {
       useUTC: false,
-      ssl: true
+      ssl: {
+        rejectUnauthorized: false
+      }
     },
     timezone: "-03:00",
     define: {
