@@ -3,7 +3,7 @@ const PostgresConnectionStringParser = require("pg-connection-string");
 
 const databaseUrl = process.env.DATABASE_URL;
 const connectionOptions = PostgresConnectionStringParser.parse(databaseUrl);
-console.log(connectionOptions)
+
 module.exports = {
   development: {
     dialect: "postgres",
