@@ -89,6 +89,12 @@ const doc = {
     },
     ResState: {
       id: 1
+    },
+    address: {
+      street: "Rua Florianopolis",
+      number: 123,
+      cep: "89229780",
+      complement: "Apto. 302"
     }
   },
 };

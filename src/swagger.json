@@ -443,7 +443,7 @@
     "/api/v1/user/{id}/sales": {
       "get": {
         "tags": [
-          " Vendas "
+          "Vendas"
         ],
         "description": "Endpoint que buscar as vendas do usuario.",
         "parameters": [
@@ -1443,7 +1443,7 @@
     "/api/v1/sales/{sale_id}/product/{product_id}/price/{price}": {
       "patch": {
         "tags": [
-          "Produtos_Vendas"
+          "Vendas"
         ],
         "description": "Endpoint que atualiza a quantidade de produtos de uma venda.",
         "parameters": [
@@ -1748,6 +1748,27 @@
         "id": {
           "type": "number",
           "example": 1
+        }
+      }
+    },
+    "address": {
+      "type": "object",
+      "properties": {
+        "street": {
+          "type": "string",
+          "example": "Rua Florianopolis"
+        },
+        "number": {
+          "type": "number",
+          "example": 123
+        },
+        "cep": {
+          "type": "string",
+          "example": "89229780"
+        },
+        "complement": {
+          "type": "string",
+          "example": "Apto. 302"
         }
       }
     }
