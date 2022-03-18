@@ -6,6 +6,9 @@
 <a id="tech"></a>
 
 Este projeto serve para testar os conhecimentos em NodeJS com Express e utilizando Sequelize para trabalhar com banco de dados.
+
+A documentação da API pode ser consultada [clicando aqui.](https://devinsales.herokuapp.com/)
+
 ## Tecnologias
 
 O projeto desenvolvido utiliza as seguintes tecnologias:
