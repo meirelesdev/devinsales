@@ -88,7 +88,7 @@ module.exports = {
     }
   },
   async updateOne(req, res) {
-    // #swagger.tags = ['Produtos_Vendas']
+    // #swagger.tags = ['Vendas']
     // #swagger.description = 'Endpoint que atualiza a quantidade de produtos de uma venda.'
         /*#swagger.parameters['sale_id'] = {
       in: 'path',

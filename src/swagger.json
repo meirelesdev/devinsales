@@ -443,7 +443,7 @@
     "/api/v1/user/{id}/sales": {
       "get": {
         "tags": [
-          " Vendas "
+          "Vendas"
         ],
         "description": "Endpoint que buscar as vendas do usuario.",
         "parameters": [
@@ -765,7 +765,10 @@
     },
     "/api/v1/sales/{sale_id}": {
       "get": {
-        "description": "",
+        "tags": [
+          "Vendas"
+        ],
+        "description": "Endpoint que buscar as vendas por id.",
         "parameters": [
           {
             "name": "sale_id",
@@ -1485,7 +1488,7 @@
     "/api/v1/sales/{sale_id}/product/{product_id}/amount/{amount}": {
       "patch": {
         "tags": [
-          "Produtos_Vendas"
+          "Vendas"
         ],
         "description": "Endpoint que atualiza a quantidade de produtos de uma venda.",
         "parameters": [

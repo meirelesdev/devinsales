@@ -10,7 +10,7 @@ const ProductsSales = require("../models/ProductsSales");
 const Product = require("../models/Product");
 const Address = require('../models/Address');
 const Delivery = require('../models/Deliveries');
-const State = require('../models/State');
+
 
 
 
@@ -93,7 +93,7 @@ module.exports = {
     }
   },
   async showSaler(req, res) {
-    // #swagger.tags = [' Vendas ']
+    // #swagger.tags = ['Vendas']
     // #swagger.description = 'Endpoint que buscar as vendas do usuario.'
 
     const { id } = req.params;
@@ -124,7 +124,8 @@ module.exports = {
   },
 
   async showSaleById(req, res) {
-
+    // #swagger.tags = ['Vendas']
+    // #swagger.description = 'Endpoint que buscar as vendas por id.'
     try {
       const sale_id = req.params.sale_id
 
