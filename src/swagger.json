@@ -443,7 +443,7 @@
     "/api/v1/user/{id}/sales": {
       "get": {
         "tags": [
-          "Vendas"
+          " Vendas "
         ],
         "description": "Endpoint que buscar as vendas do usuario.",
         "parameters": [
@@ -759,6 +759,48 @@
           },
           "404": {
             "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/sales/{sale_id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "sale_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "Você não tem autorização para este recurso."
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -1436,6 +1478,69 @@
           },
           "404": {
             "description": "O Estado não existe no Banco de Dados(No found)"
+          }
+        }
+      }
+    },
+    "/api/v1/sales/{sale_id}/product/{product_id}/amount/{amount}": {
+      "patch": {
+        "tags": [
+          "Produtos_Vendas"
+        ],
+        "description": "Endpoint que atualiza a quantidade de produtos de uma venda.",
+        "parameters": [
+          {
+            "name": "sale_id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "Id da venda",
+            "example": 1
+          },
+          {
+            "name": "product_id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "Id do produto",
+            "example": 2
+          },
+          {
+            "name": "amount",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "Quantidade atualizada do produto",
+            "example": 20
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Sucesso na atualização do endpoint"
+          },
+          "400": {
+            "description": "Id do produto enviado não é compatível ao cadastrado na venda, ou quantidade atualizada é igual à zero"
+          },
+          "401": {
+            "description": "Sem permissão para acessar o endpoint"
+          },
+          "403": {
+            "description": "Sem permissão para acessar o endpoint",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "Você não tem autorização para este recurso."
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "404": {
+            "description": "Id de produto ou venda não existem"
           }
         }
       }
