@@ -1,98 +1,38 @@
-# DEVinSales API
+﻿# Devinsales
 
-- [Tecnologias](#tech)
-- [Como Utilizar](#settings)
+> Sistema de vendas desenvolvido no bootcamp DevinHouse com Node.js, Express, PostgreSQL e Sequelize ORM. Possui autenticacao JWT e documentacao Swagger.
 
-<a id="tech"></a>
+## Stack
 
-Este projeto serve para testar os conhecimentos em NodeJS com Express e utilizando Sequelize para trabalhar com banco de dados.
+- Express.js
+- PostgreSQL
+- Sequelize ORM
+- Swagger
+- JWT
 
-A documentação da API pode ser consultada [clicando aqui.](https://devinsales.herokuapp.com/)
+## Prerequisitos
 
-## Tecnologias
+- Node.js v14+
+- PostgreSQL
 
-O projeto desenvolvido utiliza as seguintes tecnologias:
-- [NodeJS](https://nodejs.org/en/) 
-- [Express](https://expressjs.com/)
-- [Bcrypt](https://github.com/kelektiv/node.bcrypt.js/)
-- [Sequelize](https://sequelize.org/)
-- [Postgres](https://www.postgresql.org/)
-- [Swagger](https://swagger.io/)
-
-<a id="settings"></a>
-
-# Como Utilizar
-
-### **Pré-requisitos**
-
-  - Possuir o NodeJS e o Postgres instalado na sua máquina.
+## Como executar
 
 ```bash
-# Clone o Repositório
-$ git clone https://github.com/DEVin-Teltec-BRy/M2P2-DEVinSales.git
+# Clone o repositorio
+git clone https://github.com/meirelesdev/devinsales.git
+cd devinsales
+
+# Instale as dependencias
+npm install
+
+# Inicie a aplicacao
+npm run dev
 ```
 
-```bash
-# Entre na pasta projeto
-$ cd M2P2-DEVinSales
-```
+## Licenca
 
-```bash
-# Já dentro da pasta do projeto.
-# Instale as bibliotecas utlizadas no projeto.
-$ yarn ou npm install
-```
+Este projeto esta sob a licenca MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-```bash
-# Criar um arquivo .env a partir do arquivo .env.sample
-$ DATABASE_URL=postgresql://user:password@host:port/database
-$ SECRET=senha secreta
-```
+---
 
-```bash
-# Criar o Database utilizando o Sequelize
-$ yarn sequelize db:create 
-# ou
-$ npx sequelize-cli db:create
-```
-
-```bash
-# Para criar as tabelas no postgres
-$ yarn migrate:up
-# ou
-$ npm run migrate:up
-```
-
-```bash
-# Para deletar as tabelas no postgres
-$ yarn migrate:down
-# ou
-$ npm run migrate:down
-```
-
-```bash
-# Para popular os dados nas tabelas do postgres com as seeders
-$ yarn seeders:up
-# ou
-$ npm run seeders:up
-```
-
-```bash
-# Para deletas os dados das tabelas do postgres
-$ yarn seeders:down
-# ou
-$ npm run seeders:down
-```
-
-```bash
-# Executar o programa.
-$ yarn dev
-# ou
-$ npm run dev
-```
-```bash
-# Executar o programa.
-$ yarn swagger-autogen
-# ou
-$ npm run swagger-autogen
-```
+Desenvolvido por [meirelesdev](https://github.com/meirelesdev/devinsales)
